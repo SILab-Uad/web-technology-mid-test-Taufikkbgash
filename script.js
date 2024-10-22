@@ -1,11 +1,13 @@
-// Password generation logic based on user input
+// TODO: Implement the password generation logic based on user input
+
 const generatePassword = (length, options) => {
   const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const lowercase = "abcdefghijklmnopqrstuvwxyz";
   const numbers = "0123456789";
   const specialChars = "!@#$%^&*()";
 
-  // Create a variable for the character set based on selected options
+  // TODO: Create a variable for the character set based on selected options
+
   let characterPool = "";
   if (options.includeUppercase) characterPool += uppercase;
   if (options.includeLowercase) characterPool += lowercase;
@@ -26,7 +28,8 @@ const generatePassword = (length, options) => {
   return password;
 };
 
-// Generate the password based on the selected criteria
+// TODO: Generate the password based on the selected criteria
+
 function handleGeneratePassword() {
   const length = parseInt(document.getElementById("length").value);
   const options = {
@@ -37,30 +40,29 @@ function handleGeneratePassword() {
   };
 
   try {
-    const password = generatePassword(length, options);
-    document.getElementById("passwordOutput").textContent = password;
-  } catch (error) {
-    alert(error.message); 
-  }
+        const password = generatePassword(length, options);
+        document.getElementById("passwordOutput").textContent = password;
+    } catch (error) {
+        alert(error.message); 
+    }
+
+  // TODO: Add event listener to the button to call generatePassword and display the output
+
+  const password = generatePassword(length, options);
+  document.getElementById("passwordOutput").textContent = password;
 }
-
-// Add event listener to the button to call handleGeneratePassword and display the output
-document.getElementById("generateButton").addEventListener("click", handleGeneratePassword);
-
 // BONUS: Implement the copy to clipboard functionality
+
 function copyToClipboard() {
-  const password = document.getElementById("passwordOutput").textContent;
-  if (password) {
-    navigator.clipboard.writeText(password).then(() => {
-      alert("Password copied to clipboard!");
-    });
-  } else {
-    alert("No password to copy!");
-  }
-}
-
-document.getElementById("copyButton").addEventListener("click", copyToClipboard);
-
+    const password = document.getElementById("passwordOutput").textContent;
+    if (password) {
+        navigator.clipboard.writeText(password).then(() => {
+            alert("Password copied to clipboard!");
+        });
+    } else {
+        alert("No password to copy!");
+    }
+};
 module.exports = {
-  generatePassword
+    generatePassword
 };
