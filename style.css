@@ -21,7 +21,67 @@ body {
 h1 {
     font-size: 2.2em;
     margin-bottom: 20px;
-    color: #4a4a4a; /* Header color */
+    color: #000000; /* Header color */
 }
 
 /* Add more styles here as needed */
+/* Password */
+.input{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    padding: 5px;
+    width: 50%;
+    text-align: center;
+}
+/* Select criteria */
+.selectcrta{
+    margin-bottom: 20px;
+}
+
+.uppercase{
+    display: block;
+    margin-bottom: 2px;
+    font-size: 1em;
+}
+.lowercase{
+    display: block;
+    margin-bottom: 2px;
+    font-size: 1em;
+}
+
+.number{
+    display: block;
+    margin-bottom: 2px;
+    font-size: 1em;
+}
+.characters{
+    display: block;
+    margin-bottom: 2px;
+    font-size: 1em;
+}
+/* Generate Password */
+.pass{
+    background-color: rgb(27, 186, 214);
+    color: #ffffff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 2px;
+}
+.pass2{
+    background-color: rgb(24, 216, 82);
+    color: #ffffff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 2px
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px
+}
+.box button{
+    flex-grow: 1;
+    margin: 0 5px;
+}
